@@ -7,7 +7,7 @@
 @import "./vendor/bootstrap/modal";
 @import "./vendor/bootstrap/align";
 @import "./utils/colors";
-
+@import "./elements/index";
 body {
     margin: 0;
     overflow-x: hidden;
@@ -15,160 +15,11 @@ body {
     font-size: 16px;
 }
 
-.q-page {
-    width: 100vw;
-    height: 100vh;
-    &#page-1 {
-        background-color: $q-blue-dark;
-    }
-    &#page-2, &#page-8 {
-        background-color: $q-grey-dark;
-    }
-    &#page-3, &#page-7 {
-        background-color: $q-blue-light;
-    }
-    &#page-4, &#page-10 {
-        background-color: $q-yellow;
-    }
-    &#page-5, &#page-9 {
-        background-color: $q-pink;
-    }
-    &#page-6, &#page-9 {
-        background-color: $q-pink;
-    }
-}
-
-.q-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .content-container {
-        position: relative;
-    }
-    .image-box {
-        margin: auto;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-    }
-}
-
-#page-1 {
-    .image-box {
-        background-image: url("./images/logo-white.svg");
-        width: 655px;
-        height: 216px;
-        margin-left: -70px;
-    }
-    .extra-image {
-        background-image: url("./images/suit.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        right: -270px;
-        top: 0;
-        height: 320px;
-        width: 203px;
-    }
-    .text-box {
-        max-width: 468px;
-        margin: auto;
-    }
-    h1 {
-        font-size: 16px;
-        margin-bottom: 0;
-        margin-top: 29px;
-        line-height: 29px;
-    }
-    p {
-        line-height: 29px;
-        margin-top: 0;
-    }
-}
-
 ul {
     list-style: none;
 }
 
-#page-select {
-    width: 100px;
-    position: fixed;
-    right: 0;
-    top: 100px;
-    bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    .page-select-menu {
-        padding: 0;
-        li {
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background: $q-blue-grey;
-            margin-bottom: 15px;
-            border: 4px solid transparent;
-            cursor: pointer;
-            &.selected {
-                background: none;
-                border: 4px solid $q-blue-grey;
-            }
-            &:hover {
-                opacity: 0.7;
-                transition: 0.3s opacity ease-in-out;
-            }
-        }
-    }
-}
 
 
 
-.q-font {
-    color: $q-purple;
-    &--white {
-        color: white;
-    }
-}
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    .menu {
-        margin-right: 14px;
-        li {
-            color: white;
-            display: inline-block;
-            font-size: 12px;
-        }
-        li:not(:last-child) {
-            position: relative;
-            margin-right: 10px;
-            &::after {
-                content: '';
-                position: absolute;
-                right: -8px;
-                bottom: 2px;
-                height: 12px;
-                width: 1px;
-                background: white;
-            }
-        }
-    }
-    &.dark {
-        li {
-            color: $q-grey-brown;
-        }
-        li:not(:last-child) {
-            &::after {
-                background: $q-grey-brown;
-            }
-        }
-    }
-}

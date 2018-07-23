@@ -1,0 +1,17 @@
+body {
+    color: $q-purple;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.8px;
+    font-weight: bold;
+}
+
+.q-font {
+    color: $q-purple;
+    &--white {
+        color: white;
+    }
+}

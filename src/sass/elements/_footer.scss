@@ -1,0 +1,44 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .menu {
+        margin-right: 14px;
+        li {
+            color: white;
+            display: inline-block;
+            font-size: 12px;
+        }
+        li:not(:last-child) {
+            position: relative;
+            margin-right: 10px;
+            &::after {
+                content: '';
+                position: absolute;
+                right: -8px;
+                bottom: 2px;
+                height: 12px;
+                width: 1px;
+                background: white;
+            }
+        }
+    }
+    &.dark {
+        color: red;
+        .menu {
+            li {
+                color: $q-grey-brown;
+            }
+            li:not(:last-child) {
+                &::after {
+                    background: $q-grey-brown;
+                }
+            }
+        }
+    }
+}
