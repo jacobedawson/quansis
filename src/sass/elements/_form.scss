@@ -1,0 +1,20 @@
+form {
+    .inputs-top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+    .name, .email {
+        width: 48%;
+        border: none;
+        height: 30px;
+    }
+    textarea {
+        height: 94px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        border: none;
+        resize: none;
+    }
+}

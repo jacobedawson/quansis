@@ -1,0 +1,37 @@
+footer,
+nav {
+    .language-select,
+    .menu {
+        li {
+            color: white;
+            display: inline-block;
+            font-size: 12px;
+            &:not(:last-child) {
+                position: relative;
+                margin-right: 10px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: -8px;
+                    bottom: 2px;
+                    height: 12px;
+                    width: 1px;
+                    background: white;
+                }
+            }
+        }
+    }
+    &.dark {
+        .language-select,
+        .menu {
+            li {
+                color: $q-grey-brown;
+                &:not(:last-child) {
+                    &::after {
+                        background: $q-grey-brown;
+                    }
+                }
+            }
+        }
+    }
+}
