@@ -1,0 +1,15 @@
+.q-button {
+    border: none;
+    padding: 9px 16px;
+    font-size: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out all;
+    &--submit {
+        background: $q-grey-warm;
+        color:white;
+        &:hover {
+            background: darken($q-grey-warm, 10%);
+        }
+    }
+}

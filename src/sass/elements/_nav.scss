@@ -7,10 +7,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    z-index: 10;
     .logo {
         position: absolute;
         left: 0;
         width: 168px;
+        z-index: 10;
     }
     .language-select {
         margin-right: 32px;

@@ -8,6 +8,11 @@
 @import "./vendor/bootstrap/align";
 @import "./utils/colors";
 @import "./elements/index";
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     overflow-x: hidden;

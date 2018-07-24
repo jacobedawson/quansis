@@ -1,20 +1,27 @@
 form {
+    padding: 0 !important;
     .inputs-top {
         display: flex;
         justify-content: space-between;
         margin-bottom: 16px;
     }
     .name, .email {
-        width: 48%;
+        width: 49%;
         border: none;
-        height: 30px;
+        height: 32px;
+        padding-left: 14px;
+        color: $q-grey-warm;
+        font-size: 0.75rem;
     }
     textarea {
+        font-family: 'Open Sans', sans-serif;
+        padding: 14px;
         height: 94px;
         width: 100%;
         max-width: 100%;
-        padding: 0;
         border: none;
         resize: none;
+        color: $q-grey-warm;
+        font-size: 0.75rem;
     }
 }
