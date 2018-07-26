@@ -1,0 +1,12 @@
+.q-modal {
+    .tingle-modal-box {
+        max-width: 780px;
+        border-radius: 0;
+        background: $q-modal-bg;
+        color: white;
+        padding: 67px 82px 77px 82px;
+        .tingle-modal-box__content {
+            padding: 0;
+        }
+    }
+}

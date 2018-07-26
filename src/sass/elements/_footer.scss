@@ -9,5 +9,11 @@ footer {
     align-items: center;
     .menu {
         margin-right: 32px;
+        li {
+            &:hover {
+                cursor: pointer;
+                color: red;
+            }
+        }
     }
 }
