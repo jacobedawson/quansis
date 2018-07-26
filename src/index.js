@@ -1,4 +1,5 @@
 import Scroll from 'scroll-js';
+const scrollMonitor = require('scrollmonitor');
 
 const pageSelectButtons = [...document.querySelectorAll('[data-scrollto]')];
 
@@ -24,7 +25,7 @@ function toggleSelectedMenu(el) {
 const footer = document.querySelector('footer');
 const nav = document.querySelector('nav');
 function bodyClassToggle(name) {
-    if (name.match(/^page-(3|4|6|7|9|10)$/)) {
+    if (name.match(/^page-(3|4|6|7|9|x)$/)) {
         nav.classList.add('dark'); 
         footer.classList.add('dark');
     } else {
@@ -32,4 +33,18 @@ function bodyClassToggle(name) {
         footer.classList.remove('dark');
     }
 }
+
+
+const spans = [...document.querySelectorAll('.in-viewport')];
+
+spans.forEach(s => {
+    const spanWatcher = scrollMonitor.create(s);
+
+    spanWatcher.fullyEnterViewport(() => {
+        const activeID = s.id.slice(0,6);
+        const menuItem = document.querySelector('[data-scrollto=' + `${activeID}` + ']');
+        toggleSelectedMenu(menuItem);
+        bodyClassToggle(activeID);
+    });
+})
 
