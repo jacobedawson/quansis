@@ -2,7 +2,7 @@ import Scroll from 'scroll-js';
 import scrollMonitor from 'scrollmonitor';
 const modals = require('./js/modals');
 
-
+let currentPage = 'page-1';
 const pageSelectButtons = [...document.querySelectorAll('[data-scrollto]')];
 
 pageSelectButtons.forEach(el => {
@@ -15,6 +15,16 @@ pageSelectButtons.forEach(el => {
         })
         .then(bodyClassToggle(el.dataset.scrollto))
         .then(toggleSelectedMenu(el));
+    });
+});
+
+document.getElementById('scroll-more').addEventListener('click', () => {
+    const scroll = new Scroll(document.documentElement.scrollTop > 0 ? document.documentElement : document.body);
+    let nextPage = currentPage === 'page-9' ? 'page-x' :  currentPage.slice(0,5) + (+currentPage.slice(-1) + 1);
+    const scrollTo = document.getElementById(nextPage);
+    scroll.toElement(scrollTo, {
+        easing: 'easeInOutCubic',
+        duration: 750
     });
 });
 
@@ -63,7 +73,7 @@ spans.forEach(s => {
     const spanWatcher = scrollMonitor.create(s);
 
     spanWatcher.fullyEnterViewport(() => {
-        const activeID = s.id.slice(0,6);
+        const activeID = currentPage = s.id.slice(0,6);
         const menuItem = document.querySelector('[data-scrollto=' + `${activeID}` + ']');
         toggleSelectedMenu(menuItem);
         bodyClassToggle(activeID);
