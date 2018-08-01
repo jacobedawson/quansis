@@ -1,6 +1,7 @@
 import Scroll from 'scroll-js';
 import scrollMonitor from 'scrollmonitor';
 const modals = require('./js/modals');
+const translation = require('./js/translation');
 
 let currentPage = 'page-1';
 const pageSelectButtons = [...document.querySelectorAll('[data-scrollto]')];
@@ -50,13 +51,6 @@ function bodyClassToggle(name) {
 }
 
 function hideElements(name) {
-    // hide the page select on page 1
-    if (name.includes('page-1')) {
-        // hide the page select
-        document.getElementById('page-select').style.display = 'none';
-    } else {
-        document.getElementById('page-select').style.display = 'flex';
-    }
     // hide the scroll more on page 10
     if (name.includes('page-x')) {
         // hide the scroll more
