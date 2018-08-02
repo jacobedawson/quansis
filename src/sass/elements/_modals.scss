@@ -5,6 +5,9 @@
         background: $q-modal-bg;
         color: white;
         padding: 67px 82px 77px 82px;
+        max-height: 80vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
         .tingle-modal-box__content {
             padding: 0;
         }

@@ -6,7 +6,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const PurifyCssPlugin = require('purifycss-webpack');
-const SvgUrlLoader = require('svg-url-loader');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -16,8 +16,8 @@ module.exports = {
         ]
     },
     output: {
-        publicPath: '/',
-        path: path.resolve(__dirname + 'dist'),
+        // publicPath: '/',
+        path: path.resolve(__dirname, 'dist'),
         filename: "[name].js"
     },
     devServer: {
@@ -84,9 +84,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin('dist', {}),
+        new CleanWebpackPlugin(['dist']),
         new MiniCssExtractPlugin({
-            filename: "[name].css"
+            filename: "../dist/[name].css"
         }),
         new OptimizeCssAssetsPlugin({}),
         new UglifyJsPlugin(),
@@ -98,6 +98,13 @@ module.exports = {
         new PurifyCssPlugin({
             paths: ["./src/index.html"]
         }),
-        new webpack.ProgressPlugin()
+        new webpack.ProgressPlugin(),
+        new CopyWebpackPlugin([
+            {
+                from: "src/**/*.svg",
+                to: "./images/",
+                flatten: true
+            }
+        ])
     ]
 };
