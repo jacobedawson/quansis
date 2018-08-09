@@ -40,7 +40,15 @@
         position: relative;
         margin: auto;
     }
+    &:not(:last-of-type) {
+        .text-box {
+            p {
+                min-height: 130px;
+            }
+        }
+    }
 }
+
 
 #page-1 {
     .image-box {

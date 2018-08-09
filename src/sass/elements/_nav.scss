@@ -24,6 +24,9 @@ nav {
             &:hover {
                 opacity: 0.7;
             }
+            &.selected {
+                font-weight: bold;
+            }
         }
     }
 }

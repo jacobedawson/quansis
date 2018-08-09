@@ -1,5 +1,8 @@
 if (window.localStorage.getItem('quansis-lang') === 'en') {
     toggleLanguage('en');
+    document.getElementById('select-en').classList.add('selected');
+} else {
+    document.getElementById('select-de').classList.add('selected');
 }
 
 function toggleLanguage(lang) {
@@ -22,8 +25,14 @@ function toggleLanguage(lang) {
     }
 }
 
+function toggleSelected(el) {
+    document.querySelectorAll('.language-select-toggle').forEach(x => x.classList.remove('selected'));
+    el.classList.add('selected');
+}
+
 document.querySelectorAll('.language-select-toggle').forEach(el => {
     el.addEventListener('click', () => {
         toggleLanguage(el.id.slice(-2));
+        toggleSelected(el);
     });
 });
