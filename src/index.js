@@ -6,6 +6,11 @@ const translation = require('./js/translation');
 let currentPage = 'page-1';
 const pageSelectButtons = [...document.querySelectorAll('[data-scrollto]')];
 
+document.getElementById('scrollTop').addEventListener('click', () => {
+    const scroll = new Scroll(document.documentElement.scrollTop > 0 ? document.documentElement : document.body);
+    scroll.to(0,0);
+})
+
 pageSelectButtons.forEach(el => {
     const target = document.getElementById(`${el.dataset.scrollto}`);
     el.addEventListener('click', () => {
@@ -40,7 +45,8 @@ const footer = document.querySelector('footer');
 const nav = document.querySelector('nav');
 const scrollMore = document.getElementById('scroll-more');
 function bodyClassToggle(name) {
-    if (name.match(/^page-(3|4|6|7|9|x)$/)) {
+    console.log(name);
+    if (name.match(/^page-(2|4|5|7|9|x)$/)) {
         nav.classList.add('dark'); 
         footer.classList.add('dark');
         scrollMore.classList.add('dark');

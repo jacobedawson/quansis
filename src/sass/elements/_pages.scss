@@ -5,20 +5,20 @@
     &#page-1 {
         background-color: $q-blue-dark;
     }
-    &#page-2,
-    &#page-5,
+    &#page-3,
+    &#page-6,
     &#page-8 {
         background-color: $q-grey-dark;
     }
-    &#page-3,
+    &#page-4,
     &#page-7 {
         background-color: $q-blue-light;
     }
-    &#page-4,
+    &#page-5,
     &#page-x {
         background-color: $q-yellow;
     }
-    &#page-6,
+    &#page-2,
     &#page-9 {
         background-color: $q-pink;
     }
@@ -85,13 +85,8 @@
 
 #page-2 {
     .image-box {
-        height: 353px;
-        &--de {
-            background-image: url("./images/page-2-de.svg");
-        }
-        &--en {
-            background-image: url("./images/page-2-en.svg");
-        }
+        height: 458px;
+        background-image: url("./images/page-2.svg");
     }
     .text-box {
         margin-top: 100px;
@@ -100,12 +95,13 @@
 
 #page-3 {
     .image-box {
-        height: 518px;
+        height: 353px;
         margin-bottom: 80px;
         &--de {
             background-image: url("./images/page-3-de.svg");
         }
         &--en {
+            margin-left: -5px;
             background-image: url("./images/page-3-en.svg");
         }
     }
@@ -113,16 +109,21 @@
 
 #page-4 {
     .image-box {
-        height: 379px;
+        height: 518px;
         margin-bottom: 100px;
-        background-image: url("./images/page-4.svg");
+        &--de {
+            background-image: url("./images/page-4-de.svg");
+        }
+        &--en {
+            background-image: url("./images/page-4-en.svg");
+        }
     }
 }
 
 #page-5 {
     .image-box {
         margin-bottom: 60px;
-        height: 470px;
+        height: 379px;
         background-image: url("./images/page-5.svg");
     }
 }
@@ -130,7 +131,7 @@
 #page-6 {
     .image-box {
         margin-bottom: 80px;
-        height: 458px;
+        height: 470px;
         background-image: url("./images/page-6.svg");
     }
 }
@@ -160,9 +161,6 @@
 }
 
 #page-x {
-    // .text-box {
-    //     width: 640px;
-    // }
     .image-box {
         margin-bottom: 50px;
         height: 449px;
