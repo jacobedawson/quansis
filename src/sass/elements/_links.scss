@@ -6,6 +6,9 @@ nav {
             color: white;
             display: inline-block;
             font-size: 12px;
+            &:hover {
+                color: darken(white, 5%);
+            }
             &:not(:last-child) {
                 position: relative;
                 margin-right: 10px;
@@ -26,6 +29,9 @@ nav {
         .menu {
             li {
                 color: $q-grey-brown;
+                &:hover {
+                    color: lighten($q-grey-brown, 5%);
+                }
                 &:not(:last-child) {
                     &::after {
                         background: $q-grey-brown;

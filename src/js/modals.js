@@ -55,7 +55,7 @@ const termsModal = new tingle.modal({
     closeMethods: ['overlay', 'button', 'escape'],
     closeLabel: 'Close',
     cssClass: ['q-modal']
-})
+});
 
 termsModal.setContent(`
     <span lang="de">
@@ -96,9 +96,99 @@ termsModal.setContent(`
         <p>7.1 Der Kunde ist nicht berechtigt, seine Ansprüche aus dem Vertrag abzutreten.</p>
         <p>7.2 Erfüllungsort für die Lieferung der Vertragsprodukte und Gerichtsstand für alle Rechtsstreitigkeiten ist Berlin.</p>
         <p>7.3 Auf diese Allgemeinen Geschäftsbedingungen finden die in der Bundesrepublik Deutschland geltenden gesetzlichen Bestimmungen Anwendung. Das Einheitliche Kaufgesetz (EKG) und das Einheitliche Vertragsabschlußgesetz (EAG) sind ausgeschlossen.</p>
-        <p>7.4 Sollten eine oder mehrere Bestimmungen dieser Allgemeinen Geschäftsbedingungen unwirksam sein oder werden, oder dieser Vertragstext eine Regelungslücke enthalten, so werden die Vertragsparteien die unwirksame oder unvollständige Bestimmung durch angemessene Regelungen ersetzen oder ergänzen, die dem wirtschaftlichen Zweck der gewollten Regelung weitestgehend entsprechen. Die Gültigkeit der übrigen Bestimmungen bleibt davon unbeührt.</p>
-`);
+        <p>7.4 Sollten eine oder mehrere Bestimmungen dieser Allgemeinen Geschäftsbedingungen unwirksam sein oder werden, oder dieser Vertragstext eine Regelungslücke enthalten, so werden die Vertragsparteien die unwirksame oder unvollständige Bestimmung durch angemessene Regelungen ersetzen oder ergänzen, die dem wirtschaftlichen Zweck der gewollten Regelung weitestgehend entsprechen. Die Gültigkeit der übrigen Bestimmungen bleibt davon unbeührt.</p>`);
 
 document.querySelectorAll('.footer-3').forEach(el => {
     el.addEventListener('click', () => termsModal.open());
+});
+
+const privacyModal = new tingle.modal({
+    closeMethods: ['overlay', 'button', 'escape'],
+    closeLabel: 'Close',
+    cssClass: ['q-modal']
+});
+
+privacyModal.setContent(`
+    <span lang="de">
+        <h1>Datenschutzerklärung</h1>
+        <p>Wir speichern personenbezogene Daten, wenn Sie uns diese von sich aus mitteilen, wenn Sie also eine Anfrage an uns richten oder uns einen Auftrag erteilen zum Zwecke der Bearbeitung Ihres Anliegens. Bei Nutzung dieser Website speichern wir Informationen, die Ihr Browser an uns übermittelt oder die sich aus der Natur des Verbindungsaufbaus ergeben. Diese sind:</p>
+        <ul class="bullet-list">
+            <li>Browsertyp und version</li>
+            <li>Verweisende URL</li>
+            <li>Betriebssystem des zugreifenden Geräts</li>
+            <li>Datum und Uhrzeit des Serverzugriffs</li>
+            <li>IP-Adresse bzw. FQDN des zugreifenden Geräts</li>
+        </ul>
+        <p>Diese Daten sind zunächst nicht bestimmten Personen zugeordnet. Eine Zusammenführung der Daten mit anderen Datenquellen wird nicht vorgenommen. Wir behalten uns jedoch vor, diese Daten nachträglich zu prüfen, wenn uns konkrete Anhaltspunkte für eine rechtswidrige Nutzung vorliegen.</p>
+        <p>Diese Datenschutzerklärung erstreckt sich nicht auf Websites, auf die durch Links von unserer Seiten aus verwiesen wird. Bitte beachten Sie in diesem Falle die Datenschutzerklärungen der entsprechenden Fremdanbieter.</p>
+        <p>Diese Website nutzt den Dienst Google Analytics der Firma Google Inc., 1600 Amphitheatre Parkway Mountain View, CA 94043, USA. Google Analytics verwendet Cookies. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden an die Firma Google in den USA übertragen und dort gespeichert.</p>
+        <p>Sie können eine Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern. Sie können darüber hinaus die Erfassung der durch den Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: <a href="https://tools.google.com/dlpage/gaoptout?hl=de">https://tools.google.com/dlpage/gaoptout?hl=de</a></p>
+        <p>Informationen zu Nutzungsbedingungen von Google Analytics finden Sie unter <a href="http://www.google.com/analytics/terms/de.html">http://www.google.com/analytics/terms/de.html</a>, unter <a href="https://www.google.de/intl/de/policies/">https://www.google.de/intl/de/policies/</a> und in der Datenschutzerklärung von Google: <a href="https://support.google.com/analytics/answer/6004245?hl=de">https://support.google.com/analytics/answer/6004245?hl=de</a></p>
+        <p>Bei Fragen zum Datenschutz sowie bei Auskunfts-, Löschungs- oder Sperrbegehren wenden Sie sich jederzeit an uns.</p>
+        <p>Wir behalten uns das Recht vor, diese Datenschutzerklärung unter Beachtung der geltenden Datenschutzvorschriften zu ändern.</p>
+    </span>
+    <span lang="en">
+        <h1>PRIVACY STATEMENT</h1>
+        <p>We store personal information when you provide it to us, e.g. if you send us a request or give us an order, for the purpose of processing your request. When using this website we save information that your browser transmits or that is a part of the connecting protocol. These are:</p>
+        <ul class="bullet-list">
+            <li>Browser type and version</li>
+            <li>Referral URL</li>
+            <li>Operating system of the connecting device</li>
+            <li>Date and time of server access</li>
+            <li>IP address or FQDN of the connecting device</li>
+        </ul>
+        <p>This data cannot be traced back to individual persons. This data is not intended to be merged with data from other sources. We reserve the right, however, to retrospectively check this data if there are any concrete indications of unlawful use.</p>
+        <p>This privacy policy does not extend to websites referenced by links from our sites. Please note the privacy statements of the corresponding third-party providers.</p>
+        <p>This website uses the Google Analytics service of the company Google Inc., 1600 Amphitheatre Parkway Mountain View, CA 94043, USA. Google Analytics uses cookies. The information about your use of this website collected by the cookies is transferred to the company Google in the USA and stored there.</p>
+        <p>You can block cookies through a relevant function in your browser software. Additionally, you may prevent the collection by Google of the data generated by the cookie and related to your use of the website (inc. your IP address), as well as the processing of this data by Google, by downloading and installing the following browser add-on: <a href="https://tools.google.com/dlpage/gaoptout?hl=en">https://tools.google.com/dlpage/gaoptout?hl=en</a></p>
+        <p>For questions about data protection and information, cancellation or blocking requests, please contact us at any time.</p>
+        <p>We reserve the right to change this privacy policy in accordance with applicable privacy laws.</p>
+    </span>
+`);
+
+document.querySelectorAll('.footer-4').forEach(el => {
+    el.addEventListener('click', () => privacyModal.open());
+});
+
+const impressumModal = new tingle.modal({
+    closeMethods: ['overlay', 'button', 'escape'],
+    closeLabel: 'Close',
+    cssClass: ['q-modal']
+});
+
+impressumModal.setContent(`
+    <span lang="de">
+        <h1>IMPRESSUM</h1>
+        <p>quasis.de, qua-sis.de  sind Teledienste der</p>
+        <p>OSYON GmbH
+        <br>Pfuelstraße 5
+        <br>10997 Berlin
+        <br>Deutschland</p>
+        <p>Reg-Nr HRB 82465 AG Charlottenburg<br>
+        Geschäftsführer Oliver Spickhoff</br>
+        USt-ID DE217618646</p>
+        <p>webmaster@quan-sis.com</p>
+        <p>Quan sis food® ist eine eingetragene Marke der OSYON GmbH.
+        Vervielfältigung und Verbreitung unserer Inhalte oder deren Teile nur mit unserer schriftlichen Genehmigung.</p>
+        <p>Für Inhalte, auf die von unseren Seiten aus verwiesen wird, sind wir nicht verantwortlich und distanzieren uns davon vorsorglich.</p>
+        </span>
+    <span lang="en">
+        <h1>IMPRINT</h1>
+        <p>quasis.de, qua-sis.de are internet services of</p>
+        <p>OSYON GmbH
+        <br>Pfuelstraße 5
+        <br>10997 Berlin
+        <br>Deutschland</p>
+        <p>Reg-Nr HRB 82465 AG Charlottenburg<br>
+        Geschäftsführer Oliver Spickhoff</br>
+        USt-ID DE217618646</p>
+        <p>webmaster@quan-sis.com</p>
+        <p>Quan sis food® is a brand of OSYON GmbH.
+        Distribution or reproduction of this website's content or parts of its content require the written permission of OSYON GmbH.</p>
+        <p>OSYON GmbH does not assume any responsibility or liability for any information, communications or materials available at sites linked here.</p>
+    </span>
+`);
+
+document.querySelectorAll('.footer-5').forEach(el => {
+    el.addEventListener('click', () => impressumModal.open());
 });

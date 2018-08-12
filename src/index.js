@@ -35,6 +35,7 @@ function toggleSelectedMenu(el) {
     el.classList.add('selected');
 }
 
+const body = document.querySelector('body');
 const footer = document.querySelector('footer');
 const nav = document.querySelector('nav');
 const scrollMore = document.getElementById('scroll-more');
@@ -43,10 +44,12 @@ function bodyClassToggle(name) {
         nav.classList.add('dark'); 
         footer.classList.add('dark');
         scrollMore.classList.add('dark');
+        body.classList.add('dark');
     } else {
         nav.classList.remove('dark');
         footer.classList.remove('dark');
         scrollMore.classList.remove('dark');
+        body.classList.remove('dark');
     }
 }
 
@@ -75,3 +78,12 @@ spans.forEach(s => {
     });
 })
 
+// isScrolling
+let isScrolling;
+window.addEventListener('scroll', e => {
+    window.clearTimeout(isScrolling);
+    document.getElementById('scroll-more').style.opacity = 0;
+    isScrolling = setTimeout(() => {
+        document.getElementById('scroll-more').style.opacity = 100;
+    }, 400);
+}, false);

@@ -8,6 +8,8 @@
     font-weight: bold;
     color: white;
     z-index: 10;
+    opacity: 1;
+    transition: 0.4s opacity ease-in-out;
     .scroll-more-container {
         width: 130px;
         margin: auto;
