@@ -15,6 +15,9 @@ footer {
             }
         }
     }
+    @include breakpoint(sm) {
+        display: none;
+    }
 }
 
 

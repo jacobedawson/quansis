@@ -32,4 +32,7 @@
             border-top: 10px solid $q-grey-brown;
         }
     }
+    @include breakpoint(sm) {
+        display: none !important;
+    };
 }

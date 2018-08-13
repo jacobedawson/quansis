@@ -47,6 +47,17 @@
             }
         }
     }
+    @include breakpoint(sm) {
+        .text-box {
+            padding: 0 32px 16px 32px !important;  
+            h1 {
+                font-size: 17px;
+            }
+            p {
+                font-size: 13px;
+            }
+        }
+    }
 }
 
 
@@ -81,6 +92,16 @@
             margin-top: 0;
         }
     }
+    @include breakpoint(md) {
+        .extra-image {
+            display: none;
+        }
+    }
+    @include breakpoint(sm) {
+        .image-box {
+            margin-left: 0;
+        }
+    }
 }
 
 #page-2 {
@@ -90,6 +111,14 @@
     }
     .text-box {
         margin-top: 100px;
+    }
+    @include breakpoint(sm) {
+        .image-box {
+            height: 100px;
+        }
+        .text-box {
+            margin-top: 0;
+        }
     }
 }
 
@@ -105,17 +134,29 @@
             background-image: url("./images/page-3-en.svg");
         }
     }
+    @include breakpoint(sm) {
+        .image-box {
+            height: 150px;
+            margin-bottom: 0;
+        }
+    }
 }
 
 #page-4 {
     .image-box {
         height: 518px;
-        margin-bottom: 100px;
+        margin-bottom: 80px;
         &--de {
             background-image: url("./images/page-4-de.svg");
         }
         &--en {
             background-image: url("./images/page-4-en.svg");
+        }
+    }
+    @include breakpoint(sm) {
+        .image-box {
+            height: 130px;
+            margin-bottom: 0
         }
     }
 }
@@ -126,6 +167,12 @@
         height: 379px;
         background-image: url("./images/page-5.svg");
     }
+    @include breakpoint(sm) {
+        .image-box {
+            height: 120px;
+            margin-bottom: 0;
+        }
+    }
 }
 
 #page-6 {
@@ -133,6 +180,12 @@
         margin-bottom: 80px;
         height: 470px;
         background-image: url("./images/page-6.svg");
+    }
+    @include breakpoint(sm) {
+        .image-box {
+            margin-bottom: 0;
+            height: 150px;
+        }
     }
 }
 
@@ -142,6 +195,12 @@
         height: 414px;
         background-image: url("./images/page-7.svg");
     }
+    @include breakpoint(sm) {
+        .image-box {
+            margin-bottom: 0;
+            height: 150px;
+        }
+    }
 }
 
 #page-8 {
@@ -149,6 +208,12 @@
         margin-bottom: 80px;
         height: 435px;
         background-image: url("./images/page-8.svg");
+    }
+    @include breakpoint(sm) {
+        .image-box {
+            margin-bottom: 0;
+            height: 150px;
+        }
     }
 }
 
@@ -158,6 +223,12 @@
         height: 435px;
         background-image: url("./images/page-9.svg");
     }
+    @include breakpoint(sm) {
+        .image-box {
+            margin-bottom: 0;
+            height: 220px;
+        }
+    }
 }
 
 #page-x {
@@ -166,4 +237,28 @@
         height: 449px;
         background-image: url("./images/page-10.svg");
     }   
+    @include breakpoint(sm) {
+        .image-box {
+            margin-bottom: 0;
+            height: 120px;
+        }
+        .text-box {
+            padding-bottom: 0 !important;
+        }
+        .form-group {
+            padding: 20px 20px 10px 20px;
+        }
+        .q-button {
+            margin-left: 20px;
+            margin-top: 0;
+        }
+        p.mt-0 {
+            font-size: 13px;
+            text-align: center;
+        }
+        .separator {
+            width: 60%;
+            margin: 24px auto;
+        }
+    }
 }

@@ -34,6 +34,9 @@
             }
         }
     }
+    @include breakpoint(sm) {
+        display: none;
+    }
 }
 
 .menu-flag {

@@ -3,6 +3,19 @@ import scrollMonitor from 'scrollmonitor';
 const modals = require('./js/modals');
 const translation = require('./js/translation');
 
+document.addEventListener('DOMContentLoaded', () => {
+
+const body = document.querySelector('body');
+const footer = document.querySelector('footer');
+const nav = document.querySelector('nav');
+const scrollMore = document.getElementById('scroll-more');
+
+if (window.localStorage.getItem('quansis-color') === 'dark') {
+    body.classList.add('dark');
+} else {
+    body.classList.remove('dark');
+}
+
 let currentPage = 'page-1';
 const pageSelectButtons = [...document.querySelectorAll('[data-scrollto]')];
 
@@ -40,10 +53,6 @@ function toggleSelectedMenu(el) {
     el.classList.add('selected');
 }
 
-const body = document.querySelector('body');
-const footer = document.querySelector('footer');
-const nav = document.querySelector('nav');
-const scrollMore = document.getElementById('scroll-more');
 function bodyClassToggle(name) {
     console.log(name);
     if (name.match(/^page-(2|4|5|7|9|x)$/)) {
@@ -51,11 +60,13 @@ function bodyClassToggle(name) {
         footer.classList.add('dark');
         scrollMore.classList.add('dark');
         body.classList.add('dark');
+        window.localStorage.setItem('quansis-color', 'dark');
     } else {
         nav.classList.remove('dark');
         footer.classList.remove('dark');
         scrollMore.classList.remove('dark');
         body.classList.remove('dark');
+        window.localStorage.removeItem('quansis-color', 'dark');
     }
 }
 
@@ -93,3 +104,5 @@ window.addEventListener('scroll', e => {
         document.getElementById('scroll-more').style.opacity = 100;
     }, 400);
 }, false);
+
+});
