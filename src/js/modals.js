@@ -3,7 +3,7 @@ import tingle from 'tingle.js';
 const aboutUsModal = new tingle.modal({
     closeMethods: ['overlay', 'button', 'escape'],
     closeLabel: 'Close',
-    cssClass: ['q-modal']
+    cssClass: ['q-modal', 'about-us-modal']
 });
 
 aboutUsModal.setContent(`
@@ -25,7 +25,7 @@ document.querySelectorAll('.footer-1').forEach(el => {
 const contactModal = new tingle.modal({
     closeMethods: ['overlay', 'button', 'escape'],
     closeLabel: 'Close',
-    cssClass: ['q-modal']
+    cssClass: ['q-modal', 'contact-modal']
 });
 
 contactModal.setContent(`
@@ -54,7 +54,7 @@ document.querySelectorAll('.footer-2').forEach(el => {
 const termsModal = new tingle.modal({
     closeMethods: ['overlay', 'button', 'escape'],
     closeLabel: 'Close',
-    cssClass: ['q-modal']
+    cssClass: ['q-modal', 'terms-modal']
 });
 
 termsModal.setContent(`
@@ -105,7 +105,7 @@ document.querySelectorAll('.footer-3').forEach(el => {
 const privacyModal = new tingle.modal({
     closeMethods: ['overlay', 'button', 'escape'],
     closeLabel: 'Close',
-    cssClass: ['q-modal']
+    cssClass: ['q-modal', 'privacy-modal']
 });
 
 privacyModal.setContent(`
@@ -153,7 +153,7 @@ document.querySelectorAll('.footer-4').forEach(el => {
 const impressumModal = new tingle.modal({
     closeMethods: ['overlay', 'button', 'escape'],
     closeLabel: 'Close',
-    cssClass: ['q-modal']
+    cssClass: ['q-modal', 'impressum-modal']
 });
 
 impressumModal.setContent(`

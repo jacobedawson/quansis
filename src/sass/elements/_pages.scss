@@ -28,6 +28,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    ::-webkit-scrollbar {
+        display: none;
+    }
     .content-container {
         position: relative;
     }
@@ -49,7 +53,7 @@
     }
     @include breakpoint(sm) {
         .text-box {
-            padding: 0 32px 16px 32px !important;  
+            padding: 0 32px 16px 32px !important;
             h1 {
                 font-size: 17px;
             }
@@ -59,7 +63,6 @@
         }
     }
 }
-
 
 #page-1 {
     .image-box {
@@ -112,6 +115,14 @@
     .text-box {
         margin-top: 100px;
     }
+    @media screen and (max-height: 900px) {
+        .image-box {
+            height: 350px;
+        }
+        .text-box {
+            margin-top: 40px;
+        }
+    }
     @include breakpoint(sm) {
         .image-box {
             height: 100px;
@@ -134,6 +145,12 @@
             background-image: url("./images/page-3-en.svg");
         }
     }
+    @media screen and (max-height: 900px) {
+        .image-box {
+            height: 290px;
+            margin-bottom: 40px;
+        }
+    }
     @include breakpoint(sm) {
         .image-box {
             height: 150px;
@@ -153,10 +170,16 @@
             background-image: url("./images/page-4-en.svg");
         }
     }
+    @media screen and (max-height: 900px) {
+        .image-box {
+            height: 300px;
+            margin-bottom: 30px;
+        }
+    }
     @include breakpoint(sm) {
         .image-box {
             height: 130px;
-            margin-bottom: 0
+            margin-bottom: 0;
         }
     }
 }
@@ -166,6 +189,12 @@
         margin-bottom: 60px;
         height: 379px;
         background-image: url("./images/page-5.svg");
+    }    
+    @media screen and (max-height: 900px) {
+        .image-box {
+            height: 250px;
+            margin-bottom: 40px;
+        }
     }
     @include breakpoint(sm) {
         .image-box {
@@ -181,6 +210,12 @@
         height: 470px;
         background-image: url("./images/page-6.svg");
     }
+    @media screen and (max-height: 900px) {
+        .image-box {
+            height: 330px;
+            margin-bottom: 30px;
+        }
+    }
     @include breakpoint(sm) {
         .image-box {
             margin-bottom: 0;
@@ -194,6 +229,12 @@
         margin-bottom: 60px;
         height: 414px;
         background-image: url("./images/page-7.svg");
+    }
+    @media screen and (max-height: 900px) {
+        .image-box {
+            height: 330px;
+            margin-bottom: 20px;
+        }
     }
     @include breakpoint(sm) {
         .image-box {
@@ -209,6 +250,12 @@
         height: 435px;
         background-image: url("./images/page-8.svg");
     }
+    @media screen and (max-height: 900px) {
+        .image-box {
+            height: 340px;
+            margin-bottom: 40px;
+        }
+    }
     @include breakpoint(sm) {
         .image-box {
             margin-bottom: 0;
@@ -223,6 +270,12 @@
         height: 435px;
         background-image: url("./images/page-9.svg");
     }
+    @media screen and (max-height: 900px) {
+        .image-box {
+            height: 340px;
+            margin-bottom: 40px;
+        }
+    }
     @include breakpoint(sm) {
         .image-box {
             margin-bottom: 0;
@@ -236,7 +289,13 @@
         margin-bottom: 50px;
         height: 449px;
         background-image: url("./images/page-10.svg");
-    }   
+    }
+    @media screen and (max-height: 900px) {
+        .image-box {
+            height: 330px;
+            margin-bottom: 0;
+        }
+    }
     @include breakpoint(sm) {
         .image-box {
             margin-bottom: 0;

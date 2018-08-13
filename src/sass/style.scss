@@ -18,8 +18,11 @@
 body {
     margin: 0;
     overflow-x: hidden;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 ul:not(.bullet-list) {
@@ -36,7 +39,3 @@ ul:not(.bullet-list) {
 [lang="en"] {
     display: none;
 }
-
-
-
-

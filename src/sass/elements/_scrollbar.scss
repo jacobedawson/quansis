@@ -1,15 +1,21 @@
 /* Width */
-::-webkit-scrollbar {
+.tingle-modal-box::-webkit-scrollbar {
     width: 10px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+.tingle-modal-box::-webkit-scrollbar-track {
     background: $q-scrollbar-bg;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+.tingle-modal-box::-webkit-scrollbar-thumb {
     background: $q-scrollbar-thumb;
 }
 
+/* Remove scrollbar on modals that don't scroll */
+.about-us-modal .tingle-modal-box::-webkit-scrollbar,
+.impressum-modal .tingle-modal-box::-webkit-scrollbar,
+.contact-modal .tingle-modal-box::-webkit-scrollbar {
+    display: none;
+}
