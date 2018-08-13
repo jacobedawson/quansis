@@ -47,6 +47,36 @@ document.getElementById('scroll-more').addEventListener('click', () => {
     });
 });
 
+document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowUp') {
+        scrollJack('up');
+    }
+    if (e.key === 'ArrowDown') {
+        scrollJack('down');
+    }
+});
+
+function scrollJack(direction) {
+    const scroll = new Scroll(document.documentElement.scrollTop > 0 ? document.documentElement : document.body);
+    if (direction === 'down') {
+        if (currentPage === 'page-x') return;
+        let nextPage = (currentPage === 'page-9') ? 'page-x' :  currentPage.slice(0,5) + (+currentPage.slice(-1) + 1);
+        const scrollTo = document.getElementById(nextPage);
+        scroll.toElement(scrollTo, {
+            easing: 'easeInOutCubic',
+            duration: 750
+        });
+    } else {
+        if (currentPage === 'page-1') return;
+        let nextPage = (currentPage === 'page-x') ? 'page-9' : currentPage.slice(0,5) + (+currentPage.slice(-1) - 1);
+        const scrollTo = document.getElementById(nextPage);
+        scroll.toElement(scrollTo, {
+            easing: 'easeInOutCubic',
+            duration: 750
+        });
+    }
+}
+
 // Call this on scroll as well to match scroll position
 function toggleSelectedMenu(el) {
     pageSelectButtons.forEach(button => button.classList.remove('selected'));
@@ -54,7 +84,6 @@ function toggleSelectedMenu(el) {
 }
 
 function bodyClassToggle(name) {
-    console.log(name);
     if (name.match(/^page-(2|4|5|7|9|x)$/)) {
         nav.classList.add('dark'); 
         footer.classList.add('dark');
@@ -80,12 +109,9 @@ function hideElements(name) {
     }
 }
 
-
 const spans = [...document.querySelectorAll('.in-viewport')];
-
 spans.forEach(s => {
     const spanWatcher = scrollMonitor.create(s);
-
     spanWatcher.fullyEnterViewport(() => {
         const activeID = currentPage = s.id.slice(0,6);
         const menuItem = document.querySelector('[data-scrollto=' + `${activeID}` + ']');
@@ -104,5 +130,22 @@ window.addEventListener('scroll', e => {
         document.getElementById('scroll-more').style.opacity = 100;
     }, 400);
 }, false);
+
+// scroll wheel direction
+
+body.addEventListener('wheel', scrollDirection);
+function scrollDirection(event){
+    let delta;
+    if (event.wheelDelta) {
+        delta = event.wheelDelta;
+    } else { 
+        delta = (-1 * event.deltaY);
+    }
+    if (delta < 0) {
+        scrollJack('down');
+    } else if (delta > 0) {
+        scrollJack('up');
+    }
+}
 
 });
