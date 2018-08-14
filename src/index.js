@@ -148,4 +148,15 @@ function scrollDirection(event){
     }
 }
 
+// Mobile Menu Toggle
+const mobileMenuOpen = document.querySelector('.mobile-menu-open');
+const mobileMenuClose = document.querySelector('.mobile-menu-close');
+const mobileMenu = document.querySelector('.mobile-menu');
+mobileMenuOpen.addEventListener('click', e => {
+    mobileMenu.classList.add('visible');
+});
+mobileMenuClose.addEventListener('click', e => {
+    mobileMenu.classList.remove('visible');
+});
+
 });

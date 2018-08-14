@@ -13,7 +13,7 @@ aboutUsModal.setContent(`
 <p>Als  Oracle-Partner  sind  wir  zudem  stets  auf  dem  neuesten  Stand  der  Technologie  aus  dem  Hause  Oracle.  Wir  arbeiten  mit  den  neuesten  Features  der  Oracle  11g  Datenbank  unter  Linux,  Solaris  und  Windows,  implementieren  Cluster  und  RAC-Lösungen,  11g  Application-Server  und  Business  Intelligence-Lösungen.</p>
 </span>
 <span lang="en">
-<h1>English Text</h1>
+<h1>About Us</h1>
 <p>Our skilled staff is our most valuable asset. OSYON emphasizes regular training to make sure our employees would always be on top of their game. Therefore, we offer outstanding consulting services. Our know-how gives our customers a competitive edge. </p>
 <p>As an Oracle-partner, OSYON has access to the most recent Oracle-technology. We use the latest features of Oracle's 11g database on Linux, Solaris and Windows. We implement clusters and RAC-solutions, 11g Application Servers and Business Intelligence-solutions.</p>
 </span>`);
