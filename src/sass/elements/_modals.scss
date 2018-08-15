@@ -1,4 +1,7 @@
 .q-modal {
+    .tingle-modal__closeIcon {
+        font-size: 3rem;
+    }
     .tingle-modal-box {
         max-width: 780px;
         border-radius: 0;
@@ -10,6 +13,21 @@
         overflow-x: hidden;
         .tingle-modal-box__content {
             padding: 0;
+            h1 {
+                font-size: 24px;
+                line-height: 28.9px;
+                text-transform: uppercase;
+            }
+            h2 {
+                font-size: 14px;
+                line-height: 28.9px;
+                text-transform: uppercase;
+            }
+            p, ul li {
+                font-size: 14px;
+                line-height: 28.9px;
+                font-weight: 400;
+            }
         }
     }
 }

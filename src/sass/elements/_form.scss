@@ -1,9 +1,14 @@
 form {
     padding: 0 !important;
     .inputs-top {
+        margin-bottom: 16px;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 16px;
+        span {
+            // display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
     }
     .name, .email {
         font-family: 'Open Sans', sans-serif;

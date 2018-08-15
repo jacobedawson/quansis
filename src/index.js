@@ -79,11 +79,13 @@ function scrollJack(direction) {
 
 // Call this on scroll as well to match scroll position
 function toggleSelectedMenu(el) {
+    if (body.classList.contains('no-scroll')) return;
     pageSelectButtons.forEach(button => button.classList.remove('selected'));
     el.classList.add('selected');
 }
 
 function bodyClassToggle(name) {
+    if (body.classList.contains('no-scroll')) return;
     if (name.match(/^page-(2|4|5|7|9|x)$/)) {
         nav.classList.add('dark'); 
         footer.classList.add('dark');
@@ -134,7 +136,8 @@ window.addEventListener('scroll', e => {
 // scroll wheel direction
 
 body.addEventListener('wheel', scrollDirection);
-function scrollDirection(event){
+function scrollDirection(event) {
+    if (body.classList.contains('no-scroll')) return;
     let delta;
     if (event.wheelDelta) {
         delta = event.wheelDelta;
@@ -147,6 +150,44 @@ function scrollDirection(event){
         scrollJack('up');
     }
 }
+
+// Mobile touch
+document.addEventListener('touchstart', handleTouchStart, false);        
+document.addEventListener('touchmove', handleTouchMove, false);
+let xDown = null;                                                        
+let yDown = null;
+
+function getTouches(evt) {
+  return evt.touches || evt.originalEvent.touches;
+}                                                     
+
+function handleTouchStart(evt) {                                         
+    xDown = getTouches(evt)[0].clientX;                                      
+    yDown = getTouches(evt)[0].clientY;                                      
+};                                                
+
+function handleTouchMove(evt) {
+    if ( !xDown || !yDown ) {
+        return;
+    }
+
+    let xUp = evt.touches[0].clientX;                                    
+    let yUp = evt.touches[0].clientY;
+    let xDiff = xDown - xUp;
+    let yDiff = yDown - yUp;
+
+        if ( yDiff > 0 ) {
+            /* up swipe */ 
+            scrollJack('down');
+        } else { 
+            /* down swipe */
+            scrollJack('up');
+        }                 
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
+
 
 // Mobile Menu Toggle
 const mobileMenuOpen = document.querySelector('.mobile-menu-open');
