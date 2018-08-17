@@ -43,6 +43,9 @@
     .text-box {
         position: relative;
         margin: auto;
+        p {
+            line-height: 29px;
+        }
     }
     &:not(:last-of-type) {
         .text-box {
@@ -59,6 +62,7 @@
             }
             p {
                 font-size: 13px;
+                line-height: 24px;
             }
         }
     }
@@ -125,7 +129,7 @@
     }
     @include breakpoint(sm) {
         .image-box {
-            height: 100px;
+            height: 200px;
         }
         .text-box {
             margin-top: 0;
@@ -178,7 +182,7 @@
     }
     @include breakpoint(sm) {
         .image-box {
-            height: 130px;
+            height: 150px;
             margin-bottom: 0;
         }
     }
@@ -299,7 +303,7 @@
     @include breakpoint(sm) {
         .image-box {
             margin-bottom: 0;
-            height: 120px;
+            height: 110px;
         }
         .text-box {
             padding-bottom: 0 !important;
