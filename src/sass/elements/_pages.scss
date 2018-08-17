@@ -130,6 +130,7 @@
     }
     @include breakpoint(sm) {
         .image-box {
+            background-image: url("./images/page-2-mobile.svg");
             height: 200px;
             background-size: cover;
         }
@@ -161,6 +162,13 @@
         .image-box {
             height: 150px;
             margin-bottom: 0;
+            &--de {
+                background-image: url("./images/page-3-de-mobile.svg");
+            }
+            &--en {
+                margin-left: -5px;
+                background-image: url("./images/page-3-en-mobile.svg");
+            }
         }
     }
 }
@@ -186,6 +194,12 @@
         .image-box {
             height: 150px;
             margin-bottom: 0;
+            &--de {
+                background-image: url("./images/page-4-de-mobile.svg");
+            }
+            &--en {
+                background-image: url("./images/page-4-en-mobile.svg");
+            }
         }
     }
 }
@@ -204,8 +218,9 @@
     }
     @include breakpoint(sm) {
         .image-box {
-            height: 120px;
+            height: 140px;
             margin-bottom: 0;
+            background-image: url("./images/page-5-mobile.svg");
         }
     }
 }
@@ -264,6 +279,7 @@
         .image-box {
             margin-bottom: 0;
             height: 150px;
+            background-image: url("./images/page-7-mobile.svg");
         }
     }
 }
@@ -303,8 +319,8 @@
     @include breakpoint(sm) {
         .image-box {
             margin-bottom: 0;
-            height: 220px;
-            background-size: cover;
+            height: 150px;
+            background-image: url("./images/page-9-mobile.svg");
         }
     }
 }
