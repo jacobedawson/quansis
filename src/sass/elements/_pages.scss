@@ -106,7 +106,8 @@
     }
     @include breakpoint(sm) {
         .image-box {
-            margin-left: 0;
+            height: 100px;
+            margin-left: -34px;
         }
     }
 }
@@ -130,6 +131,7 @@
     @include breakpoint(sm) {
         .image-box {
             height: 200px;
+            background-size: cover;
         }
         .text-box {
             margin-top: 0;
@@ -223,7 +225,25 @@
     @include breakpoint(sm) {
         .image-box {
             margin-bottom: 0;
-            height: 150px;
+            height: 175px;
+        }
+    }
+    // iPhone X
+    @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+        .image-box {
+            height: 230px;
+        }
+    }
+    // Pixel 2 XL
+    @media only screen 
+    and (device-width : 411px) 
+    and (device-height : 823px) 
+    and (-webkit-device-pixel-ratio : 3.5) {
+        .image-box {
+            height: 230px;
         }
     }
 }
@@ -284,6 +304,7 @@
         .image-box {
             margin-bottom: 0;
             height: 220px;
+            background-size: cover;
         }
     }
 }
@@ -322,6 +343,24 @@
         .separator {
             width: 60%;
             margin: 24px auto;
+        }
+    }
+    // iPhone X
+    @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+        .image-box {
+            height: 200px;
+        }
+    }
+    // Pixel 2 XL
+    @media only screen 
+    and (device-width : 411px) 
+    and (device-height : 823px) 
+    and (-webkit-device-pixel-ratio : 3.5) {
+        .image-box {
+            height: 200px;
         }
     }
 }
