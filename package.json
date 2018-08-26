@@ -36,6 +36,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "scrollmonitor": "^1.2.4",
     "simple-scrollbar": "^0.4.0",
     "tingle.js": "^0.13.2"

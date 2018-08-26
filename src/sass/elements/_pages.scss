@@ -109,6 +109,22 @@
             height: 100px;
             margin-left: -34px;
         }
+        h1, p {
+            line-height: 24px !important;
+        }
+    }
+    @include breakpoint(xs) {
+        .image-box {
+            height: 85px;
+            margin-left: -30px;
+        }
+        .text-box {
+            width: 250px;
+            h1 {
+                font-size: 12px;
+                margin-top: 8px;
+            }
+        }
     }
 }
 

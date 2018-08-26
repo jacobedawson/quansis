@@ -11,10 +11,13 @@ nav {
     .logo-link {
         position: absolute;
         top: 0;
-        left: 0;
+        left: 167px;
+        width: 168px;
+        height: auto;
         .logo {
             position: absolute;
-            left: 167px;
+            left: 0;
+            top: 0;
             width: 168px;
             z-index: 10;
         }
@@ -55,9 +58,10 @@ nav {
     }
     @include breakpoint(sm) {
         .logo-link {
+            left: 0;
+            width: 90px;
             .logo {
-                left: 0;
-                width: 90px;
+                width: 100%;
             }
         }
         .language-select {

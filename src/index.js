@@ -1,5 +1,7 @@
+import 'babel-polyfill';
 import Scroll from 'scroll-js';
 import scrollMonitor from 'scrollmonitor';
+const forEachPolyfill = require('./js/forEach'); // for IE 11 
 const modals = require('./js/modals');
 const translation = require('./js/translation');
 
