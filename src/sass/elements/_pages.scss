@@ -99,6 +99,14 @@
             margin-top: 0;
         }
     }
+    // 1024 x 768 Laptop
+    @media only screen 
+    and (device-width : 1024px) 
+    and (device-height : 768px) {
+        .extra-image {
+            display: none;
+        }
+    }
     @include breakpoint(md) {
         .extra-image {
             display: none;
@@ -143,6 +151,48 @@
         .text-box {
             margin-top: 40px;
         }
+    }  
+    // 1366 x 768 Laptop
+    @media only screen 
+    and (device-width : 1366px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 300px;
+            margin-bottom: 0;
+        }
+        .text-box {
+            margin-top: 0;
+        }
+    } 
+    // 1280 x 1024 Laptop
+    @media only screen 
+    and (device-width : 1280px) 
+    and (device-height : 1024px) {
+        .image-box {
+            height: 370px;
+        }
+        .text-box {
+            margin-top: 0;
+        }
+    }
+    // 1280 x 800 Laptop
+    @media only screen 
+    and (device-width : 1280px) 
+    and (device-height : 800px) {
+        .image-box {
+            height: 290px;
+        }
+        .text-box {
+            margin-top: 0;
+        }
+    }
+    // 1024 x 768 Laptop
+    @media only screen 
+    and (device-width : 1024px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 250px;
+        }
     }
     @include breakpoint(sm) {
         .image-box {
@@ -172,6 +222,41 @@
         .image-box {
             height: 290px;
             margin-bottom: 40px;
+        }
+    }
+    // 1366 x 768 Laptop
+    @media only screen 
+    and (device-width : 1366px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 240px;
+            margin-bottom: 20px;
+        }
+    }
+    // 1280 x 1024 Laptop
+    @media only screen 
+    and (device-width : 1280px) 
+    and (device-height : 1024px) {
+        .image-box {
+            height: 290px;
+            margin-bottom: 40px;
+        }
+    }
+    // 1280 x 800 Laptop
+    @media only screen 
+    and (device-width : 1280px) 
+    and (device-height : 800px) {
+        .image-box {
+            height: 240px;
+            margin-bottom: 20px;
+        }
+    }
+    // 1024 x 768 Laptop
+    @media only screen 
+    and (device-width : 1024px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 220px;
         }
     }
     @include breakpoint(sm) {
@@ -206,6 +291,41 @@
             margin-bottom: 30px;
         }
     }
+    // 1366 x 768 Laptop
+    @media only screen 
+    and (device-width : 1366px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 270px;
+            margin-bottom: 0;
+        }
+    }
+    // 1280 x 1024 Laptop
+    @media only screen 
+    and (device-width : 1280px) 
+    and (device-height : 1024px) {
+        .image-box {
+            height: 350px;
+            margin-bottom: 20px;
+        }
+    }
+    // 1280 x 800 Laptop
+    @media only screen 
+    and (device-width : 1280px) 
+    and (device-height : 800px) {
+        .image-box {
+            height: 240px;
+            margin-bottom: 20px;
+        }
+    }
+    // 1024 x 768 Laptop
+    @media only screen 
+    and (device-width : 1024px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 220px;
+        }
+    }
     @include breakpoint(sm) {
         .image-box {
             height: 150px;
@@ -232,6 +352,32 @@
             margin-bottom: 40px;
         }
     }
+    // 1366 x 768 Laptop
+    @media only screen 
+    and (device-width : 1366px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 200px;
+            margin-bottom: 20px;
+        }
+    }
+    // 1280 x 1024 Laptop
+    @media only screen 
+    and (device-width : 1280px) 
+    and (device-height : 1024px) {
+        .image-box {
+            height: 250px;
+            margin-bottom: 40px;
+        }
+    }
+    // 1024 x 768 Laptop
+    @media only screen 
+    and (device-width : 1024px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 170px;
+        }
+    }
     @include breakpoint(sm) {
         .image-box {
             height: 140px;
@@ -251,6 +397,41 @@
         .image-box {
             height: 330px;
             margin-bottom: 30px;
+        }
+    }
+    // 1366 x 768 Laptop
+    @media only screen 
+    and (device-width : 1366px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 280px;
+            margin-bottom: 0;
+        }
+    }
+    // 1280 x 1024 Laptop
+    @media only screen 
+    and (device-width : 1280px) 
+    and (device-height : 1024px) {
+        .image-box {
+            height: 400px;
+            margin-bottom: 20px;
+        }
+    }
+    // 1280 x 800 Laptop
+    @media only screen 
+    and (device-width : 1280px) 
+    and (device-height : 800px) {
+        .image-box {
+            height: 280px;
+            margin-bottom: 30px;
+        }
+    }
+    // 1024 x 768 Laptop
+    @media only screen 
+    and (device-width : 1024px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 240px;
         }
     }
     @include breakpoint(sm) {
@@ -291,6 +472,41 @@
             margin-bottom: 20px;
         }
     }
+    // 1366 x 768 Laptop
+    @media only screen 
+    and (device-width : 1366px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 240px;
+            margin-bottom: 0;
+        }
+    }
+    // 1280 x 1024 Laptop
+    @media only screen 
+    and (device-width : 1280px) 
+    and (device-height : 1024px) {
+        .image-box {
+            height: 340px;
+            margin-bottom: 40px;
+        }
+    }
+    // 1280 x 800 Laptop
+    @media only screen 
+    and (device-width : 1280px) 
+    and (device-height : 800px) {
+        .image-box {
+            height: 270px;
+            margin-bottom: 0;
+        }
+    }
+    // 1024 x 768 Laptop
+    @media only screen 
+    and (device-width : 1024px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 200px;
+        }
+    }
     @include breakpoint(sm) {
         .image-box {
             margin-bottom: 0;
@@ -310,6 +526,32 @@
         .image-box {
             height: 340px;
             margin-bottom: 40px;
+        }
+    }
+    // 1366 x 768 Laptop
+    @media only screen 
+    and (device-width : 1366px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 260px;
+            margin-bottom: 10px;
+        }
+    }
+    // 1280 x 1024 Laptop
+    @media only screen 
+    and (device-width : 1280px) 
+    and (device-height : 1024px) {
+        .image-box {
+            height: 350px;
+            margin-bottom: 30px;
+        }
+    }
+    // 1024 x 768 Laptop
+    @media only screen 
+    and (device-width : 1024px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 210px;
         }
     }
     @include breakpoint(sm) {
@@ -333,6 +575,32 @@
             margin-bottom: 40px;
         }
     }
+    // 1366 x 768 Laptop
+    @media only screen 
+    and (device-width : 1366px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 280px;
+            margin-bottom: 20px;
+        }
+    }
+    // 1280 x 1024 Laptop
+    @media only screen 
+    and (device-width : 1280px) 
+    and (device-height : 1024px) {
+        .image-box {
+            height: 400px;
+            margin-bottom: 40px;
+        }
+    }
+    // 1024 x 768 Laptop
+    @media only screen 
+    and (device-width : 1024px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 250px;
+        }
+    }
     @include breakpoint(sm) {
         .image-box {
             margin-bottom: 0;
@@ -352,6 +620,23 @@
         .image-box {
             height: 330px;
             margin-bottom: 0;
+        }
+    }
+    // 1366 x 768 Laptop
+    @media only screen 
+    and (device-width : 1366px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 260px;
+            margin-bottom: 0;
+        }
+    }
+    // 1024 x 768 Laptop
+    @media only screen 
+    and (device-width : 1024px) 
+    and (device-height : 768px) {
+        .image-box {
+            height: 225px;
         }
     }
     @include breakpoint(sm) {
